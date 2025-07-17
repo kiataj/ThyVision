@@ -1,0 +1,40 @@
+name: thyroid-classifier
+channels:
+  - conda-forge
+  - nvidia
+  - pytorch
+  - defaults
+
+dependencies:
+  - python=3.10
+  - numpy
+  - pandas
+  - zarr
+  - scikit-learn
+  - matplotlib
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=11.8
+  - monai
+  - itk
+  - fastapi
+  - uvicorn
+  - flask
+  - pyside2
+  - pyqt
+  - ipykernel
+  - jupyterlab
+  - pip
+  - pip:
+      - lighter-zoo==0.1.3 
+      - huggingface-hub==0.33.1
+      - mlflow
+      - dask
+      - sqlalchemy
+      - docker
+      - pyinstaller
+      - simpleitk
+      - tifffile
+      - torchvision==0.20.1
+      - torchmetrics

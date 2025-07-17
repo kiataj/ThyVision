@@ -1,0 +1,28 @@
+name: Build thyroid-inference-app Docker image
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Docker
+      uses: docker/setup-buildx-action@v2
+
+    - name: Build Docker image
+      run: docker build -t thyroid-inference-app .
+
+    - name: Save Docker image
+      run: docker save thyroid-inference-app | gzip > thyroid-inference-app.tar.gz
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: thyroid-inference-app
+        path: thyroid-inference-app.tar.gz

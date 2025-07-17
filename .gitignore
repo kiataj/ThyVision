@@ -1,0 +1,28 @@
+# Python cache and environment
+__pycache__/
+.ipynb_checkpoints/
+venv/
+.env/
+
+# Model weights and binaries
+*.pt
+*.pth
+*.h5
+*.npy
+*.zarr
+
+# Image and medical data
+*.tif
+*.nii
+
+# Logs and experiment tracking
+logs/
+runs/
+mlruns/
+
+# Data and text files
+data/
+*.csv
+
+# Exclude uploaded files or scratch space
+uploads/

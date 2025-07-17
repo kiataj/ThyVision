@@ -1,0 +1,26 @@
+cat <<EOF > .dockerignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.ipynb
+.ipynb_checkpoints/
+.env/
+.venv/
+env/
+venv/
+.DS_Store
+Thumbs.db
+*.log
+inference-ui/node_modules/
+inference-ui/dist/
+build/
+dist/
+*.tif
+*.nii
+*.h5
+*.npy
+*.zarr
+uploads/
+data/
+EOF
