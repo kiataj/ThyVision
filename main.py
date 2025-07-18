@@ -21,6 +21,8 @@ import mlflow.pyfunc
 from huggingface_hub import snapshot_download
 from inference_module import infer_patchwise
 
+token=os.getenv("HF_TOKEN", None)
+
 # --------------------------------------------------------------
 # Logging
 # --------------------------------------------------------------
@@ -58,7 +60,7 @@ snapshot_download(
     repo_id="HippoCanFly/ct-thyroid-classifier",
     repo_type="model",
     local_dir=str(local_dir),
-    token="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",
+    token=token,
 )
 
 # --------------------------------------------------------------

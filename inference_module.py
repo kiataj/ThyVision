@@ -1,4 +1,3 @@
-import napari
 import numpy as np
 from tqdm import tqdm
 import torch
@@ -69,30 +68,4 @@ def infer_patchwise(encoder, classifier, volume, patch_size, stride, task_list, 
         prob_maps[task] = np.divide(prob_maps[task], count_map, where=count_map > 0)
 
     return prob_maps
-
-def show_prediction_napari(volume: np.ndarray, prob_maps: dict):
-    """Launch Napari to view the volume and overlaid probability maps.
-
-    Args:
-        volume (np.ndarray): Input volume, shape (D, H, W).
-        prob_maps (dict): Dictionary of {task_name: prob_map}, each (D, H, W).
-    """
-    viewer = napari.Viewer()
-    viewer.add_image(
-        volume,
-        name="Input Volume",
-        colormap="gray",
-        contrast_limits=(0, 1),
-        blending="additive"
-    )
-    for task, prob_map in prob_maps.items():
-        viewer.add_image(
-            prob_map,
-            name=f"{task}_prob",
-            colormap="magenta",
-            opacity=0.5,
-            contrast_limits=(0, 1),
-            blending="additive"
-        )
-    napari.run()
 
