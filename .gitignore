@@ -12,7 +12,6 @@ venv/
 *.zarr
 
 # Image and medical data
-*.tif
 *.nii
 
 # Logs and experiment tracking
