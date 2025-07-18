@@ -1,5 +1,4 @@
-# Thyroid Classifier: Web-based 3D Inference & Visualization
-
+# Thyroid Classifier: Web-based 3D Inference for micro-CT images of thyroid cancer
 This project is a lightweight web application for running patchwise inference of diagnostics and BRAF V600E mutation on 3D volumetric micro-CT scans of thyroid tumors.
 
 ## Features
